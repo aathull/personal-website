@@ -44,3 +44,9 @@ public/       Static assets
 ```
 
 Everything personal (name, intro, projects, skills, contact links) lives in [`lib/content.ts`](lib/content.ts), so you can change the content without touching the components.
+
+## License
+
+The code is released under the [MIT License](LICENSE), so feel free to borrow it for your own site.
+
+The personal content (the text in `lib/content.ts` and the images in `public/`) is © Athul Jomon, all rights reserved. If you fork this, please swap in your own.
