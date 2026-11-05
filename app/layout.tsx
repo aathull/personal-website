@@ -13,9 +13,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const description = `${site.intro}. Projects, a bit about me, and how to get in touch.`;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: site.name,
-  description: site.intro,
+  description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: site.name,
+    title: site.name,
+    description,
+    locale: "en_GB",
+  },
+  twitter: { card: "summary_large_image", title: site.name, description },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -4,6 +4,9 @@
 export const site = {
   name: "Athul Jomon",
   firstName: "Athul",
+  // Shown in the nav. `url` is used for metadata, the sitemap and social previews.
+  website: "athul.co.uk",
+  url: "https://athul.co.uk",
   // Shown big on the second screen. Keep it short, no full stop.
   intro: "Penultimate year MEng Computer Science student at the University of Bristol",
   email: "athul@athul.co.uk",
@@ -19,9 +22,12 @@ export type Project = {
   title: string;
   description: string;
   stack: string[];
-  image: string;
+  // Optional for in-progress projects: they fall back to a striped "under construction" panel.
+  image?: string;
   repo?: string;
   live?: string;
+  // "building" moves the project into the "currently building" row with a caution-tape banner.
+  status?: "building";
 };
 
 // The first project is shown large as the featured one.
@@ -52,6 +58,13 @@ export const projects: Project[] = [
     image: "https://picsum.photos/seed/athul-scotland-yard/1000/700",
     repo: "https://github.com/aathull",
   },
+  // In-progress projects go in this same list with `status: "building"`. No image needed. For example:
+  // {
+  //   title: "Something new",
+  //   description: "One or two lines on what it is and what you're working on right now.",
+  //   stack: ["TypeScript", "Go"],
+  //   status: "building",
+  // },
 ];
 
 // TODO: tweak so it sounds like you

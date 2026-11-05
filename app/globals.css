@@ -26,6 +26,14 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
+  /* "Currently building" caution tape: two identical copies, so shifting by half loops seamlessly */
+  --animate-tape: tape 30s linear infinite;
+  @keyframes tape {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   /* Typewriter cursor */
   --animate-blink: blink 1s steps(1) infinite;
   @keyframes blink {
