@@ -1,0 +1,4 @@
+# Cloudflare response headers. The generated social preview image has no file extension,
+# so tell browsers and link-preview crawlers it's a PNG.
+/opengraph-image
+  Content-Type: image/png
