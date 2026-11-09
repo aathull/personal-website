@@ -29,9 +29,14 @@ Other scripts:
 
 | Command         | What it does                          |
 | --------------- | ------------------------------------- |
-| `npm run build` | Production build                      |
-| `npm start`     | Serve the production build            |
-| `npm run lint`  | Run ESLint                            |
+| `npm run build`   | Static production build into `out/`                 |
+| `npm run preview` | Build, then serve `out/` locally the way Cloudflare will |
+| `npm run deploy`  | Build, then deploy to Cloudflare Workers            |
+| `npm run lint`    | Run ESLint                                          |
+
+## Deploying
+
+The site is a static export (`output: "export"`) served by Cloudflare Workers static assets, configured in [`wrangler.jsonc`](wrangler.jsonc). Run `npx wrangler login` once, then `npm run deploy`.
 
 ## Project structure
 
