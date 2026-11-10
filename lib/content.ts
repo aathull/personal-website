@@ -56,9 +56,11 @@ export const projects: Project[] = [
   },
   // In-progress projects: `status: "building"` puts them in the "currently building" row. No image needed.
   {
-    title: "Shhhh",
-    description: "A new project I'm working on right now. More details soon.",
-    stack: ["Shhhh"],
+    title: "Phonetroller",
+    description:
+      "Play 1v1 games with friends using your phones as controllers. Open the game on a shared screen, scan the QR code, and your phone's button presses are sent live to the host over WebSockets.",
+    stack: ["Next.js", "TypeScript", "WebSockets"],
+    repo: "https://github.com/aathull/Phonetroller-games",
     status: "building",
   },
 ];

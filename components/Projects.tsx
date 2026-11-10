@@ -94,7 +94,7 @@ function BuildingTape() {
 function BuildingCard({ project }: { project: Project }) {
   return (
     <article className="group">
-      <div className="relative aspect-16/10 overflow-hidden rounded-2xl bg-surface">
+      <div className="relative aspect-16/10 overflow-hidden rounded-md bg-surface">
         <ProjectImage project={project} sizes="(min-width: 768px) 50vw, 100vw" dim />
         <BuildingTape />
       </div>
@@ -131,7 +131,7 @@ export function Projects() {
 
         {/* Featured project: image + text split, stacks on mobile */}
         <Reveal delay={0.05} className="mt-12">
-          <article className="group grid grid-cols-1 overflow-hidden rounded-2xl bg-surface md:grid-cols-5">
+          <article className="group grid grid-cols-1 overflow-hidden rounded-md bg-surface md:grid-cols-5">
             <div className="relative aspect-16/10 overflow-hidden md:col-span-3 md:aspect-auto md:min-h-105">
               <ProjectImage project={featured} sizes="(min-width: 768px) 60vw, 100vw" />
             </div>
@@ -153,7 +153,7 @@ export function Projects() {
           {rest.map((project, i) => (
             <Reveal key={project.title} delay={0.05 * (i + 1)}>
               <article className="group">
-                <div className="relative aspect-16/10 overflow-hidden rounded-2xl bg-surface">
+                <div className="relative aspect-16/10 overflow-hidden rounded-md bg-surface">
                   <ProjectImage project={project} sizes="(min-width: 768px) 50vw, 100vw" />
                 </div>
                 <div className="mt-5 flex flex-col gap-3">
@@ -171,7 +171,6 @@ export function Projects() {
           <div className="mt-24 md:mt-32">
             <Reveal>
               <h2 className="text-2xl font-semibold tracking-tight lowercase md:text-4xl">currently building</h2>
-              <p className="mt-3 text-muted">rough edges included</p>
             </Reveal>
             <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
               {building.map((project, i) => (
