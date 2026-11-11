@@ -45,14 +45,14 @@ export const projects: Project[] = [
     description:
       "Conway's Game of Life in Go, parallelised with goroutines for a 1.94x speedup, then split into a distributed system with the compute server on AWS EC2.",
     stack: ["Go", "RPC", "AWS EC2"],
-    image: "/projects/GOL.webp",
+    image: "/projects/GOL.png",
   },
   {
     title: "Scotland Yard AI",
     description:
       "The Scotland Yard board game in Java, with an AI for Mr. X that picks its moves using minimax search and alpha-beta pruning.",
     stack: ["Java"],
-    image: "/projects/ScotlandYard.webp",
+    image: "/projects/ScotlandYard.png",
   },
   // In-progress projects: `status: "building"` puts them in the "currently building" row. No image needed.
   {
